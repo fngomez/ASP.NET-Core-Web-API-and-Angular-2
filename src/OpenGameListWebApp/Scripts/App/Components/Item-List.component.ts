@@ -8,11 +8,13 @@ import { ItemService } from "../Services/Item.Service";
         <h2>Latest Items</h2>
         <ul class="items">
             <li *ngFor="let item of items"
-                [class.selected]="item == selectedItem"
+                [class.selected]="item === selectedItem"
                 (click)="onSelect(item)">
                 <span>{{item.Title}}</span>
             </li>
-        </ul>`,
+        </ul>
+        <Item-Detail *ngIf="selectedItem" [item]="selectedItem"></Item-Detail>
+    `,
     styles: [`
         ul.items li {
             cursor: pointer;
@@ -26,7 +28,7 @@ import { ItemService } from "../Services/Item.Service";
 
 export class ItemListComponent implements OnInit
 {
-    selectItem: Item;
+    selectedItem: Item;
     items: Item[];
     errorMessage: string;
 
@@ -45,8 +47,8 @@ export class ItemListComponent implements OnInit
 
     onSelect(item: Item)
     {
-        this.selectItem = item;
-        console.log("Item with Id " + this.selectItem.Id + " has been selected.");
+        this.selectedItem = item;
+        console.log("Item with Id " + this.selectedItem.Id + " has been selected.");
     }
 
 }

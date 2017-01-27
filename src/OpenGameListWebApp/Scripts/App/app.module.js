@@ -1,5 +1,5 @@
 ///<reference path="../../typings/index.d.ts"/>
-System.register(["@angular/core", "@angular/platform-browser", "@angular/http", "rxjs/Rx", "./Components/App.component", "./Components/Item-List.component", "./Services/Item.Service"], function (exports_1, context_1) {
+System.register(["@angular/core", "@angular/platform-browser", "@angular/http", "@angular/forms", "rxjs/Rx", "./Components/App.component", "./Components/Item-List.component", "./Components/Item-Detail.component", "./Services/Item.Service"], function (exports_1, context_1) {
     "use strict";
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -11,7 +11,7 @@ System.register(["@angular/core", "@angular/platform-browser", "@angular/http", 
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var __moduleName = context_1 && context_1.id;
-    var core_1, platform_browser_1, http_1, App_component_1, Item_List_component_1, Item_Service_1, AppModule;
+    var core_1, platform_browser_1, http_1, forms_1, App_component_1, Item_List_component_1, Item_Detail_component_1, Item_Service_1, AppModule;
     return {
         setters: [
             function (core_1_1) {
@@ -23,6 +23,9 @@ System.register(["@angular/core", "@angular/platform-browser", "@angular/http", 
             function (http_1_1) {
                 http_1 = http_1_1;
             },
+            function (forms_1_1) {
+                forms_1 = forms_1_1;
+            },
             function (_1) {
             },
             function (App_component_1_1) {
@@ -30,6 +33,9 @@ System.register(["@angular/core", "@angular/platform-browser", "@angular/http", 
             },
             function (Item_List_component_1_1) {
                 Item_List_component_1 = Item_List_component_1_1;
+            },
+            function (Item_Detail_component_1_1) {
+                Item_Detail_component_1 = Item_Detail_component_1_1;
             },
             function (Item_Service_1_1) {
                 Item_Service_1 = Item_Service_1_1;
@@ -43,17 +49,19 @@ System.register(["@angular/core", "@angular/platform-browser", "@angular/http", 
             }());
             AppModule = __decorate([
                 core_1.NgModule({
-                    // directives, components, and pipes
+                    // Directives, components, and pipes
                     declarations: [
                         App_component_1.AppComponent,
-                        Item_List_component_1.ItemListComponent
+                        Item_List_component_1.ItemListComponent,
+                        Item_Detail_component_1.ItemDetailComponent
                     ],
-                    // modules
+                    // Modules
                     imports: [
                         platform_browser_1.BrowserModule,
-                        http_1.HttpModule
+                        http_1.HttpModule,
+                        forms_1.FormsModule
                     ],
-                    // providers
+                    // Providers
                     providers: [
                         Item_Service_1.ItemService
                     ],
