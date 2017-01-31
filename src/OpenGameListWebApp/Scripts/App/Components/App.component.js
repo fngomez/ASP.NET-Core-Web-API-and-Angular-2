@@ -27,7 +27,8 @@ System.register(["@angular/core"], function (exports_1, context_1) {
             AppComponent = __decorate([
                 core_1.Component({
                     selector: "opengamelist",
-                    template: "\n                <h1>{{title}}</h1>\n                <Item-List></Item-List>"
+                    templateUrl: './Templates/App.component.html',
+                    styleUrls: ['./Styles/App.component.css']
                 }),
                 __metadata("design:paramtypes", [])
             ], AppComponent);

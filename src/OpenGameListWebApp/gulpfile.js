@@ -32,6 +32,14 @@ var srcPaths = {
 
     js_rxjs: [
         'node_modules/rxjs/**'
+    ],
+
+    html: [
+        'Templates/*.html'
+    ],
+
+    css: [
+        'Styles/*.css'
     ]
 };
 
@@ -39,7 +47,9 @@ var destPaths = {
     app: 'wwwroot/app/',
     js: 'wwwroot/js/',
     js_angular: 'wwwroot/js/@angular',
-    js_rxjs: 'wwwroot/js/rxjs'
+    js_rxjs: 'wwwroot/js/rxjs',
+    html: 'wwwroot/Templates/',
+    css: 'wwwroot/Styles/'
 };
 
 // Compile, minify and create sourcemaps all Typescript files and place them
@@ -71,6 +81,18 @@ gulp.task('js', function () {
         .pipe(gulp.dest(destPaths.js));
 });
 
+// Copy all HTML files to wwwroot
+gulp.task('html', function () {
+    return gulp.src(srcPaths.html)
+        .pipe(gulp.dest(destPaths.html));
+});
+
+// Copy all CSS files to wwwroot
+gulp.task('css', function () {
+    return gulp.src(srcPaths.css)
+        .pipe(gulp.dest(destPaths.css));
+});
+
 // Delete wwwroot/js contents
 gulp.task('js_clean', function () {
     return gulp.src(destPaths.js + "*", { read: false })
@@ -79,11 +101,11 @@ gulp.task('js_clean', function () {
 
 // Watch specified files and define what to do upon file changes
 gulp.task('watch', function () {
-    gulp.watch([srcPaths.app, srcPaths.js], ['app', 'js']);
+    gulp.watch([srcPaths.app, srcPaths.js, srcPaths.html], ['app', 'js', 'html', 'css']);
 });
 
 // Global cleanup task
 gulp.task('cleanup', ['app_clean', 'js_clean']);
 
 // Define the default task so it will launch all other tasks
-gulp.task('default', ['app', 'js', 'watch']);
+gulp.task('default', ['app', 'js', 'html', 'css', 'watch']);

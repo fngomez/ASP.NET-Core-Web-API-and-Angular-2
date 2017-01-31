@@ -2,9 +2,8 @@
 
 @Component({
     selector: "opengamelist",
-    template: `
-                <h1>{{title}}</h1>
-                <Item-List></Item-List>`
+    templateUrl: './Templates/App.component.html',
+    styleUrls: ['./Styles/App.component.css']
 })
 
 export class AppComponent

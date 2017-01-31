@@ -33,8 +33,8 @@ System.register(["@angular/core", "../Models/Item"], function (exports_1, contex
             ItemDetailComponent = __decorate([
                 core_1.Component({
                     selector: "Item-Detail",
-                    template: "\n        <div *ngIf=\"item\" class=\"item-details\">\n            <h2>{{item.Title}} - Detail View</h2>\n            <ul>\n                <li>\n                    <label>Title:</label>\n                    <input [(ngModel)]=\"item.Title\" placeholder=\"Insert the title...\" />\n                </li>\n                <li>\n                    <label>Description:</label>\n                    <textarea [(ngModel)]=\"item.Description\" placeholder=\"Insert a suitable description...\"></textarea>\n                </li>\n            </ul>\n        </div>\n    ",
-                    styles: ["\n        .item-details {\n            margin: 5px;\n            padding: 5px 10px;\n            border: 1px solid black;\n            background-color: #dddddd;\n            width: 300px;\n        }\n\n        .item-details * {\n            vertical-align: middle;\n        }\n\n        .item-details ul li {\n            padding: 5px 0;\n        }\n    "]
+                    templateUrl: './Templates/Item-Detail.component.html',
+                    styleUrls: ['./Styles/Item-Detail.component.css']
                 }),
                 __metadata("design:paramtypes", [])
             ], ItemDetailComponent);
