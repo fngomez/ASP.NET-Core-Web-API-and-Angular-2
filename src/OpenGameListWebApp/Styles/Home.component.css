@@ -1,0 +1,20 @@
+﻿ItemList {
+    min-width: 332px;
+    border: 1px solid #aaaaaa;
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px;
+}
+
+ItemList.latest {
+    background-color: #f9f9f9;
+}
+
+ItemList.most-viewed {
+    background-color: #f0f0f0;
+}
+
+ItemList.random {
+    background-color: #e9e9e9;
+}
+

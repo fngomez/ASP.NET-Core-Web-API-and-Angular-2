@@ -1,4 +1,7 @@
 <h1>{{title}}</h1>
-<Item-List class="latest"></Item-List>
-<Item-List class="most-viewed"></Item-List>
-<Item-List class="random"></Item-List>
+<div class="menu">
+    <a class="home" [routerLink]="['']">Home</a>
+    | <a class="about" [routerLink]="['about']">About</a>
+    | <a class="login" [routerLink]="['login']">Login</a>
+</div>
+<router-outlet></router-outlet>
