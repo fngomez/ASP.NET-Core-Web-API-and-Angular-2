@@ -97,7 +97,6 @@ C:\Users\Fernando\documents\visual studio 2017\Projects\OpenGameList\src\OpenGam
 C:\Users\Fernando\documents\visual studio 2017\Projects\OpenGameList\src\OpenGameListWebApp\bin\Debug\net452\System.Runtime.InteropServices.RuntimeInformation.dll
 C:\Users\Fernando\documents\visual studio 2017\Projects\OpenGameList\src\OpenGameListWebApp\bin\Debug\net452\System.Text.Encodings.Web.dll
 C:\Users\Fernando\documents\visual studio 2017\Projects\OpenGameList\src\OpenGameListWebApp\bin\Debug\net452\System.Threading.Tasks.Extensions.dll
-C:\Users\Fernando\documents\visual studio 2017\Projects\OpenGameList\src\OpenGameListWebApp\obj\Debug\net452\OpenGameListWebApp.csprojResolveAssemblyReference.cache
 C:\Users\Fernando\documents\visual studio 2017\Projects\OpenGameList\src\OpenGameListWebApp\obj\Debug\net452\OpenGameListWebApp.csproj.OpenGameListWebApp.exe.config
 C:\Users\Fernando\documents\visual studio 2017\Projects\OpenGameList\src\OpenGameListWebApp\obj\Debug\net452\OpenGameListWebApp.AssemblyInfo.cs
 C:\Users\Fernando\documents\visual studio 2017\Projects\OpenGameList\src\OpenGameListWebApp\obj\Debug\net452\OpenGameListWebApp.exe
